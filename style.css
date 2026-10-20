@@ -1,0 +1,781 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #111827;
+    --gold: #6D5CFF;
+    --white: #FFFFFF;
+    --light: #F8F9FF;
+    --dark: #111827;
+    --text: #626575;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.section {
+    padding: 100px 5%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 5%;
+    background-color: var(--white);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark);
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar a {
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 55px;
+    padding: 100px 5%;
+    background-color: var(--light);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.12;
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.description {
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+}
+
+.btn-outline {
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 495px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-image,
+.about-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.about-content > p:not(.eyebrow) {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.text-link:hover {
+    color: var(--primary);
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:not(.eyebrow) {
+    color: var(--text);
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background-color: var(--light);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.service-card {
+    min-width: 0;
+    padding: 24px;
+    background-color: var(--white);
+    border: 1px solid #EAE6EC;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+.number {
+    display: block;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+.service-wide {
+    grid-column: auto;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    flex: 1 1 calc(33.333% - 25px);
+    min-width: 220px;
+    overflow: hidden;
+    border: 1px solid #EAE6EC;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.project-card > img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-category {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.project-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.project-content > p:not(.project-category) {
+    color: var(--text);
+}
+
+/* =========================
+   WHY NOVA
+========================= */
+
+.why-nova {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.why-nova .eyebrow {
+    color: var(--gold);
+}
+
+.why-nova .section-heading h2 {
+    font-size: 48px;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.feature {
+    flex: 1 1 220px;
+}
+
+.feature h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    color: #D0C9D4;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--light);
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-content h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.contact-content > p:not(.eyebrow) {
+    color: var(--text);
+}
+
+.contact-details {
+    min-width: 230px;
+}
+
+.contact-details p {
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.contact-details p:last-child {
+    color: var(--text);
+    font-weight: normal;
+}
+
+.contact-details a:hover {
+    color: var(--gold);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 35px 5%;
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.footer p {
+    color: #C8C0CD;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: right;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Laptop and smaller desktops */
+@media (max-width: 1024px) {
+
+    .section {
+        padding: 80px 4%;
+    }
+
+    .hero {
+        gap: 35px;
+        padding: 80px 4%;
+    }
+
+    .hero-image img {
+        height: 420px;
+    }
+
+    .about {
+        gap: 40px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .projects-container {
+        gap: 20px;
+    }
+
+    .project-card {
+        min-width: 0;
+    }
+
+    .project-content {
+        padding: 18px;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 20px 4%;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+        padding: 60px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 6vw, 48px);
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    /* Services: two cards per row */
+    .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    /* Projects: two cards per row */
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        min-width: 0;
+    }
+
+    .project-card > img {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 18px;
+    }
+
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .feature {
+        min-width: 0;
+    }
+
+    .feature h3 {
+        font-size: 19px;
+    }
+
+    .why-nova .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .contact {
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .contact-details {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .copyright {
+        text-align: right;
+    }
+}
+
+
+/* Phone */
+@media (max-width: 480px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px 16px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 45px 5%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    /* Services: one card per row */
+    .services-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+    /* Projects: one card per row */
+    .projects-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .project-card > img {
+        height: 230px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .features-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .why-nova .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .contact-content h2 {
+        font-size: 30px;
+    }
+
+    .contact-details {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .copyright {
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .navbar {
+        gap: 10px 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .project-card > img {
+        height: 200px;
+    }
+}
+
+
